@@ -8,8 +8,8 @@ function accountInfo() {
         if (accountRequest.toLowerCase() === "q") {
             q = true;
 
-        // condition to widthdraw
-        // the letter d is used to make a deposit
+            // condition to widthdraw
+            // the letter d is used to make a deposit
         } else if (accountRequest.toLowerCase() === "w") {
             // user prompted by a message to withdrawl
             let wAmount = prompt("How much would you like to widthdraw?");
@@ -23,7 +23,7 @@ function accountInfo() {
                 alert('You widthdrew' + ' ' + (wAmount) + ',' + ' ' + 'your available balance is' + ' ' + (accountBalance - wAmount));
             }
 
-          // the letter d is used to make a deposit
+            // the letter d is used to make a deposit
         } else if (accountRequest.toLowerCase() === "d") {
 
             // user is prompted by a message to make a deposit
@@ -38,10 +38,14 @@ function accountInfo() {
                 alert('You have deposited' + ' ' + (dAmount) + ',' + ' ' + 'Your total balance is' + ' ' + (parseInt(dAmount) + accountBalance));
             }
 
-        // the letter b is used to check account balance
+            // the letter b is used to check account balance
         } else if (accountRequest.toLowerCase() === "b") {
-        // user is notified of balance amount
+            // user is notified of balance amount
             alert('your available blance is' + ' ' + (accountBalance));
+
+            // user is alerted of invalid cha use
+        } else {
+            alert('Invalid Entry');
         }
     }
 }
